@@ -9,16 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+
+
     <PackageReference Include="DotNetEnv" Version="2.2.0" />
-    <PackageReference Include="HotChocolate.AspNetCore" Version="12.3.0" />
-    <PackageReference Include="HotChocolate.Stitching" Version="12.3.0" />
-    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.2.2" />
+    <PackageReference Include="HotChocolate.Stitching" Version="12.6.0" />
+    <PackageReference Include="HotChocolate.AspNetCore" Version="12.6.0" />
+    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="12.6.0" />
+   
 	<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
 	<PackageReference Include="Microsoft.AspNetCore.HeaderPropagation" Version="6.0.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.14.1" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
   </ItemGroup>
-
-  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

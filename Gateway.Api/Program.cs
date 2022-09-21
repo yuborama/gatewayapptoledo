@@ -29,21 +29,19 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 
 // Cargango Microservicios
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddGraphQLServer().AddType<UploadType>();
 builder.Services.AddHeaderPropagation(o =>
 {
     o.Headers.Add("Authorization");
 });
 
-var environment = Environment.GetEnvironmentVariable("APP_ENV");
+builder.Services.AddAuthorization();
 
 builder.Services.AddHttpClient(PetShop, c => c.BaseAddress = new Uri("http://localhost:7001/graphql/")).AddHeaderPropagation();
 
-builder.Services.AddAuthorization();
+
 
 // Carga de Esquemas individuales de Microservicios
 builder.Services.AddGraphQLServer()
-    .AddType<UploadType>()
     .AddRemoteSchema(PetShop);
 
 builder.Services.AddCors(option => {
